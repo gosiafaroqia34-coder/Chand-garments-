@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Chand Garments | Online Clothing Store</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
 
@@ -18,14 +19,15 @@
       color: #222;
     }
 
+    /* HEADER */
     header {
       background: #111;
       color: white;
-      padding: 15px 5%;
+      padding: 15px 6%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
@@ -40,7 +42,7 @@
 
     nav {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
@@ -57,13 +59,14 @@
     .cart {
       background: #f5c542;
       color: #111;
-      padding: 9px 14px;
-      border-radius: 6px;
+      padding: 10px 15px;
+      border-radius: 7px;
       font-weight: bold;
     }
 
+    /* HERO */
     .hero {
-      min-height: 430px;
+      min-height: 450px;
       padding: 70px 7%;
       display: flex;
       align-items: center;
@@ -72,12 +75,13 @@
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 700px;
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
+      font-size: 50px;
+      line-height: 1.15;
+      margin-bottom: 20px;
     }
 
     .hero h1 span {
@@ -85,35 +89,495 @@
     }
 
     .hero p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 25px;
       color: #ddd;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 28px;
     }
 
-    .btn {
+    .shop-btn {
       display: inline-block;
       background: #f5c542;
       color: #111;
-      padding: 13px 24px;
+      padding: 14px 25px;
       border-radius: 7px;
       text-decoration: none;
       font-weight: bold;
     }
 
+    /* GENERAL SECTION */
     .section {
-      padding: 45px 6%;
+      padding: 55px 6%;
     }
 
-    .section-title {
+    .title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
-    .section-title h2 {
-      font-size: 30px;
+    .title h2 {
+      font-size: 32px;
       margin-bottom: 8px;
     }
 
-    .section-title p {
+    .title p {
       color: #777;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .category {
+      background: white;
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .category h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .category p {
+      color: #777;
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .product-image {
+      height: 230px;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 75px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .old-price {
+      font-size: 14px;
+      color: #999;
+      text-decoration: line-through;
+      margin-left: 5px;
+    }
+
+    .add-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 7px;
+      background: #111;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .add-btn:hover {
+      background: #f5c542;
+      color: #111;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      background: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #777;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 6%;
+    }
+
+    footer h2 {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #bbb;
+      margin: 7px 0;
+    }
+
+    .copyright {
+      border-top: 1px solid #333;
+      margin-top: 25px;
+      padding-top: 20px;
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .categories,
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 400px;
+        text-align: center;
+        padding: 55px 6%;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 40px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo">
+      Chand <span>Garments</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="cart">
+      🛒 Cart: <span id="cartCount">0</span>
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Welcome to
+        <span>Chand Garments</span>
+      </h1>
+
+      <p>
+        Latest fashion for Men, Women and Kids.
+        Discover quality garments at affordable prices.
+      </p>
+
+      <a href="#products" class="shop-btn">
+        Shop Now
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="section" id="categories">
+
+    <div class="title">
+      <h2>Shop By Category</h2>
+      <p>Find clothes for everyone</p>
+    </div>
+
+    <div class="categories">
+
+      <div class="category">
+        <div class="category-icon">👔</div>
+        <h3>Men</h3>
+        <p>Stylish garments for men</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">👗</div>
+        <h3>Women</h3>
+        <p>Beautiful fashion for women</p>
+      </div>
+
+      <div class="category">
+        <div class="category-icon">👶</div>
+        <h3>Kids</h3>
+        <p>Comfortable clothes for kids</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+
+    <div class="title">
+      <h2>Featured Products</h2>
+      <p>Our latest collection</p>
+    </div>
+
+    <div class="products">
+
+      <!-- PRODUCT 1 -->
+      <div class="product">
+
+        <div class="product-image">
+          👕
+        </div>
+
+        <div class="product-info">
+
+          <h3>Men's T-Shirt</h3>
+
+          <div class="price">
+            Rs. 1,499
+            <span class="old-price">Rs. 1,799</span>
+          </div>
+
+          <button class="add-btn" onclick="addToCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 2 -->
+      <div class="product">
+
+        <div class="product-image">
+          👗
+        </div>
+
+        <div class="product-info">
+
+          <h3>Women's Dress</h3>
+
+          <div class="price">
+            Rs. 2,499
+            <span class="old-price">Rs. 2,999</span>
+          </div>
+
+          <button class="add-btn" onclick="addToCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+      <div class="product">
+
+        <div class="product-image">
+          🧥
+        </div>
+
+        <div class="product-info">
+
+          <h3>Kids Jacket</h3>
+
+          <div class="price">
+            Rs. 1,999
+            <span class="old-price">Rs. 2,399</span>
+          </div>
+
+          <button class="add-btn" onclick="addToCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 4 -->
+      <div class="product">
+
+        <div class="product-image">
+          👖
+        </div>
+
+        <div class="product-info">
+
+          <h3>Men's Jeans</h3>
+
+          <div class="price">
+            Rs. 2,199
+            <span class="old-price">Rs. 2,599</span>
+          </div>
+
+          <button class="add-btn" onclick="addToCart()">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="section">
+
+    <div class="title">
+      <h2>Why Choose Chand Garments?</h2>
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Reliable delivery service.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💵</div>
+        <h3>Cash on Delivery</h3>
+        <p>Pay when your order arrives.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⭐</div>
+        <h3>Quality Products</h3>
+        <p>Quality garments at reasonable prices.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer id="contact">
+
+    <h2>Chand Garments</h2>
+
+    <p>Men • Women • Kids</p>
+
+    <p>📞 Contact us for orders</p>
+
+    <p>📦 Cash on Delivery Available</p>
+
+    <div class="copyright">
+      © 2026 Chand Garments — All Rights Reserved.
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    let cartCount = 0;
+
+    function addToCart() {
+
+      cartCount++;
+
+      document.getElementById("cartCount").textContent = cartCount;
+
+      alert("Product added to cart!");
+
+    }
+
+  </script>
+
+</body>
+          </html>
